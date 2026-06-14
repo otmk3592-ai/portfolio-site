@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<head lang="ja">
+  <head>
+    <!--リセットCSSはstyle.css内に記載-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <!--SNS対策OpenGraphProtocol-->
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='Maipe-portfolio'>
+  <meta property='og:url' content='https://main-test-server.main.jp/Portfolio_site/work-info-genji.html'>
+  <meta property='og:description' content='Maipeのポートフォリオサイトです。'>
+  <meta property="og:image" content="images/ogp.png">
+  <meta name="description" content="Maipeのポートフォリオサイトです" />
+  <title>Maipe-portfolio-work-info</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/icon-192x192.png"/>
+  <link rel="apple-touch-icon" type="image/png" href="images/apple-touch-icon-180x180.png">
+  <link ref="icon" href="images/favicon.ico">
+  <!-----後でアイコン入れる-->
+  <link rel=”canonical” href=”https://main-test-server.main.jp/Portfolio_site/work-info-genji.html” /><!--正規化-->
+</head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="header-logo">
+          <a href=".">T.Oyama-portfolio</a>
+        </h1>
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-item"><a href="index.html">Home</a></li>
+              <li class="header-nav-item"><a href="works/genji-site/index.html">Site</a></li>
+              <li class="header-nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+  
+    <div class="date"><!----旧クラス名Header-->
+      <time id="modify"></time>
+        <script>/* 更新日の取得 */
+          const last = new Date(document.lastModified);
+          const year = last.getFullYear();
+          const month = last.getMonth() + 1;
+          const date = last.getDate();
+          /* 日付を書き換える */
+          const target = document.getElementById('modify');
+          target.textContent = year + '-' + month + '-' + date;
+        </script>
+    </div>
+  <div class="site-wrapper">
+    <article class="site" id="site">
+      <h3 class="site-title">源氏物語美術館</h3>
+        <div class="text-center">デザイン（手書き）/コーディング（VScode）<br>絵巻の世界に引き込まれるような演出をしたいと思い、cssとanimationZoom＋jsで桜吹雪を使用しました。
+        </div>
+
+    <section class="skill-section" id="skill"></section>
+      <div class="site-flex">
+        <div class="site-flex__item">
+          <a href="works/genji-site/index.html">
+          <img src="images/genjiSC-all.jpg" width="1000"height="auto"title="このサイトに移動"></a>
+        </div><!--site-flex-item閉じ-->
+
+        <div class="site-flex__item">
+          <h3 class="site-heading">URL（別ウィンドウで開きます）</h3>
+            <a href="works/genji-site/index.html" target="_blank" rel="noopener noreferrer">works/genji-site/index.html</a>
+          <h3 class="site-heading">制作期間</h3>
+            <p>デザイン：2日</p>
+            <p>コーディング：7日</p>
+          <h3 class="site-heading">コンセプト</h3>
+            <p>古典美術をWeb演出で紹介する。</p>
+          <h3 class="site-heading">ターゲット</h3>
+            <p>40代～の女性。手芸や読書、美術鑑賞、インテリアなどが好き。</p>
+            <p>終活に興味があり、所持品を増やしたくないが趣味は豊かに暮らしていきたいと考えている。</p>
+            <p>2024年の大河ドラマを楽しみにしている。</p>
+          <h3 class="site-heading">配色について</h3>
+            <P>配色は絵巻に使用されている色から抽出し、絵巻の雰囲気を損なわない配色を心がけました。</P>
+          <h3 class="site-heading">トップビューの演出</h3>
+            <P>絵巻の世界に引き込まれるような演出をしたいと思い、cssでanimationZoom＋jsで桜吹雪を使用しました。</P>
+        </div>
+        </div><!---site-flex-item閉じ-->
+      </div><!---site-flex閉じ-->
+    </section>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+      <div class="inner">
+        <h2 class="title">CONTACT</h2>
+          <p class="text-center">
+            お問い合わせは、履歴書に記載のメールアドレスにお願い致します。
+          </p>
+      </div>
+    </section>
+  </div>
+    <!-- /contact -->
+    <div class="page-top" id="js-page-top">
+      <span class="material-icons-outlined">expand_less</span>
+    </div>
+  
+    <footer>
+      <div class="text-center">
+        &copy ; 2023 T.Oyama
+      </div>
+    </footer>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+  </body>
+</html>

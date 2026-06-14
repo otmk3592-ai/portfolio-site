@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<head lang="ja">
+  <head>
+    <!--リセットCSSはstyle.css内に記載-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <!--SNS対策OpenGraphProtocol-->
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='T.Oyama-portfolio'>
+  <meta property='og:url' content='https://main-test-server.main.jp/Portfolio_site/index.html'>
+  <meta property='og:description' content='大山環のポートフォリオサイトです。Ｗｅｂサイト（ＨＴＭＬ５・ＷｏｒｄＰｒｅｓｓ）Ｗｅｂバナー掲載しています。よかったらぜひご覧下さい！'>
+  <meta property="og:image" content="https://main-test-server.main.jp/Portfolio_site/images/ogp-1200x630.png">
+  <meta name="description" content="大山環のポートフォリオサイトです" />
+  <title>T.Oyama-portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/icon-192x192.png"/>
+  <link rel="apple-touch-icon" type="image/png" href="images/apple-touch-icon-180x180.png">
+  <link ref="icon" href="images/favicon.ico">
+  <!-----後でアイコン入れる-->
+  <link rel=”canonical” href=”https://main-test-server.main.jp/Portfolio_site/index.html” /><!--正規化-->
+</head>
+
+  <body>
+        <!-- header -->
+        <header class="header">
+          <div class="header-inner">
+            <h1 class="header-logo">
+              <a href=".">T.Oyama-portfolio</a>
+            </h1>
+            <nav class="header-nav">
+              <ul class="header-nav-list">
+                <li class="header-nav-item"><a href="#web">WebSite</a></li>
+                <li class="header-nav-item"><a href="#banner">Banner</a></li>
+                <li class="header-nav-item"><a href="#contact">Contact</a></li>
+              </ul>
+            </nav>
+          </div>
+        </header>
+        <!-- /header -->
+
+    <main>
+        <div class="date"><!----旧クラス名Header-->
+          <time id="modify"></time>
+          <script>/* 更新日の取得 */
+            const last = new Date(document.lastModified);
+            const year = last.getFullYear();
+            const month = last.getMonth() + 1;
+            const date = last.getDate();
+            /* 日付を書き換える */
+            const target = document.getElementById('modify');
+            target.textContent = year + '-' + month + '-' + date;
+          </script>
+        </div>
+
+    <section class="works-section" id="works">
+        <h2 class="title">WORKS</h2>
+          <h3 class="work-name" id="web">Webサイト（すべて架空のサイトになります）クリックで遷移します。</h3>
+            <div class="grid">
+              <div class="item-w">
+                <p>NON-Caffee(架空のノンカフェインコーヒー専門店サイト)<br>Figmaでデザイン＆プロトタイプからコーディング。</p>
+                <a href="work-info-caffee.html">
+                <img src="images/non-c-sc.jpg"height="300" title="このサイトをもっと見る">
+                </a>
+              </div>
+              <div class="item-w">
+                <p>株式会社○○建設(架空の企業サイト)<br>Figmaでデザイン＆プロトタイプからコーディング。</p>
+                <a href="work-info-corporate.html">
+                <img src="images/corporate-sc.jpg"width="500" height="300"title="このサイトをもっと見る">
+                </a>
+              </div>
+              <div class="item-w">
+                <p>源氏物語美術館。1P構成。<br>CSSアニメーション+javascriptで演出あり。</p>
+               <a href="work-info-genji.html">
+                <img src="images/genji-PC_.jpeg"width="500"height="300" title="このサイトをもっと見る">
+              </a>
+              </div>
+              <div class="item-w">
+                <p>N-beauty（架空のヘアサロンサイト）＋勉強ブログ<br>WordPress/プラグインカスタマイズ・SEO対策</p>
+                <a href="work-info-N-beauty.html">
+                <img src="images/N-beautySC-all.jpg"width="500"height="300" title="このサイトに移動">
+                </a>
+              </div>
+
+        </div><!---grid閉じ-->
+
+        <h3 class="work-name" id="banner">Webバナー（すべて架空のバナーになります）Photoshop・Figma</h3>
+          <div class="grid-b">
+            <div class="item-b">
+              <p>gifバナー1200×630</p>
+                <img src="images/uranai-anime-1200x630.gif"alt="">
+            </div>
+            <div class="item-b">
+              <p>自分のWordPress用にデザインしたキャラクターです。<br>このポートフォリオサイトにもfaviconで出演中。</p>
+                <img src="images/WP-thumbnail596x294.jpg" title="説明ページへ">
+            </div>
+            <div class="item-b">
+              <p>アイキャッチバナー1200×630</p>
+                <img src="images/web-banner-eco1200x630.jpg" title="説明ページへ">
+            </div>
+            <div class="item-b">
+              <p>YouTubuバナー1280×720</p>
+                <img src="images/YouTubu-lip.jpg" title="説明ページへ">
+            </div>
+            <div class="item-b">
+              <p>Facebookバナー1200×600</p>
+                <img src="images/Facebook-banner-1200x630.jpg" title="説明ページへ">
+            </div>
+            <div class="item-c">
+              <p>バナー336×280</p>
+                <img src="images/rec-banner-336x280.jpg" title="説明ページへ">
+                <img src="images/rec-cafe.jpg"title="説明ページへ">
+            </div>
+ 
+            <div class="item-c">
+              <p>Instagramバナー1080×1080</p>
+                <img src="images/lnstagram-jewelry.jpg" title="説明ページへ">
+                <img src="images/Instagram-kaden.jpg" title="説明ページへ">
+            </div>
+        </div>
+
+
+      </section>
+
+      <!-- contact -->
+      <section class="contact-section" id="contact">
+        <div class="credit-inner">
+          <h2 class="title">クレジット表記</h2>
+          <p class="text-center"><strong>Thank you for teaching</strong></p>
+            <p class="credit">progate、SKILLHUBをはじめとする沢山の無料勉強サイトを提供して下さっている企業の皆様、個人ブログで初心者にもわかりやすく解説してくださっているエンジニアの皆様に厚くお礼申し上げます。<br>
+            メルカリで良書を格安で譲って下さった方々にもありがとうございました。</p>
+          <div class="about-table">
+            <table class="table-type">
+              <tr>
+                <th>画像</th>
+                <td>Adobe Stock</td>
+              </tr>
+              <tr>
+                <th>フォント</th>
+                <td>Googleフォント</td>
+              </tr>
+              <tr>
+                <th>リセットCSS</th>
+                <td>desyle.css</td>
+              </tr>
+              <tr>
+                <th>ファビコン</th>
+                <td>favicon generator</td>
+              </tr>
+              <tr>
+                <th>Webサイト（法人）</th>
+                <td>『Progate』株式会社Progate様、『Skillhub』株式会社スキルハブ様、『TCD』株式会社デザインプラス様、他</td>
+              </tr>
+              <tr>
+                <th>Webサイト（個人）</th>
+                <td>『無料コーディング練習所』ねこポン様、『しょーごログ』しょーご様、『マンガでわかるホームページ作成』テイク様、他</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </section>
+      
+      <!-- contact -->
+      <section class="contact section" id="contact">
+        <div class="inner">
+          <h2 class="title">CONTACT</h2>
+          <p class="text-center">
+            お問い合わせは、メールにてお願いいたします。（現在SNSを運用しておりません）
+          </p>
+          <p class="text-center">
+            jobt.oyama2@gmail.com
+          </p>
+        </div>
+      </section>
+
+      <!-- /contact -->
+      <div class="page-top" id="js-page-top">
+        <span class="material-icons-outlined">expand_less</span>
+      </div>
+    </main>
+    <footer>
+      <div class="text-center">
+        &copy ; 2023 T.oyama
+      </div>
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+  </body>
+</html>

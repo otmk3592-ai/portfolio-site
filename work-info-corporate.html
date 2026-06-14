@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head lang="ja">
+  <head>
+    <!--リセットCSSはstyle.css内に記載-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <!--SNS対策OpenGraphProtocol-->
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='Maipe-portfolio'>
+  <meta property='og:url' content='https://main-test-server.main.jp/Portfolio_site/work-info-corporate.html'>
+  <meta property='og:description' content='Maipeのポートフォリオサイトです。'>
+  <meta property="og:image" content="images/ogp.png">
+  <meta name="description" content="Maipeのポートフォリオサイトです" />
+  <title>Maipe-portfolio-work-info</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/icon-192x192.png"/>
+  <link rel="apple-touch-icon" type="image/png" href="images/apple-touch-icon-180x180.png">
+  <link ref="icon" href="images/favicon.ico">
+  <!-----後でアイコン入れる-->
+  <link rel=”canonical” href=”https://main-test-server.main.jp/Portfolio_site/work-info-corporate.html” /><!--正規化-->
+</head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="header-logo">
+          <a href=".">T.Oyama-portfolio</a>
+        </h1>
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-item"><a href="index.html">Home</a></li>
+              <li class="header-nav-item"><a href="works/corporate-site/index.html">Site</a></li>
+              <li class="header-nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+  
+    <div class="date"><!----旧クラス名Header-->
+      <time id="modify"></time>
+        <script>/* 更新日の取得 */
+          const last = new Date(document.lastModified);
+          const year = last.getFullYear();
+          const month = last.getMonth() + 1;
+          const date = last.getDate();
+          /* 日付を書き換える */
+          const target = document.getElementById('modify');
+          target.textContent = year + '-' + month + '-' + date;
+        </script>
+    </div>
+  <div class="site-wrapper">
+    <article class="site" id="site">
+      <h3 class="site-title">株式会社○○建設（架空の企業サイト）</h3>
+        <div class="text-center">デザイン（Figma）/コーディング（VScode）<br>上がコーディング後のサイトキャプチャ、下がFigmaのプロトタイプ画面です。
+          <a href="works/corporate-site/index.html" target="_blank" rel="noopener noreferrer">
+          <img src="images/CorporateSC-all.jpg"width="1000"height="auto" title="このサイトに移動">
+          </a>
+        </div>
+
+    <section class="skill-section" id="skill"></section>
+      <div class="site-flex">
+        <div class="site-flex__item">
+          <a href="works/corporate-site/index.html">
+          <img src="images/corporate-figmaSC.jpg" width="1000"height="auto"title="このサイトに移動"></a>
+        </div><!--site-flex-item閉じ-->
+
+        <div class="site-flex__item">
+          <h3 class="site-heading">URL（別ウィンドウで開きます）</h3>
+            <a href="works/corporate-site/index.html" target="_blank" rel="noopener noreferrer">works/corporate-site/index.html</a>
+          <h3 class="site-heading">制作期間</h3>
+            <p>デザイン：2日</p>
+            <p>コーディング：3日＋1日（修正）</p>
+          <h3 class="site-heading">コンセプト</h3>
+            <p>中小企業（建設会社）のHPです。従業員は500人以内、通年採用中の設定で作成しました。</p>
+          <h3 class="site-heading">工夫した点</h3>
+          <p>メインカラーを白・青（2色）とし、ボタンには反対色を用いました。</p>
+          <p>SP版が縦に長いため、TOPへ戻るボタンは右下に固定・ホバー時に不透明になるようにしました。</p>
+          <p>Figmaでデザインした時点では、フローチャートは横並びにしましたが、コーディング後SPで確認しづらかったため、視認性向上のために縦並びのフローチャートに変更しました。</p>
+          <p>写真には現場写真をイメージしたドロップシャドウを入れました。</p>
+          <p>トップビューのタイトル文字、フローチャート図形にはホバー時ズームアップを入れました。</p>
+          <h3 class="site-heading">使用機能</h3>
+            <p>Figma</p>
+            <p><strong>・デザイン</strong></p>
+            <p>オートレイアウト/メインコンポーネント/グループ/バリアント/ドロップシャドウ</p>
+            <p><strong>・プロトタイプ</strong></p>
+            <p>インタラクション（マウスオーバー時・画面遷移時）</p>
+            <p>作成過程をWordpressサイト内のブログに記録しています、よかったら見て下さい。</p></div>
+        </div><!---site-flex-item閉じ-->
+      </div><!---site-flex閉じ-->
+    </section>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+      <div class="inner">
+        <h2 class="title">CONTACT</h2>
+          <p class="text-center">
+            お問い合わせは、履歴書に記載のメールアドレスにお願い致します。
+          </p>
+      </div>
+    </section>
+  </div>
+    <!-- /contact -->
+    <div class="page-top" id="js-page-top">
+      <span class="material-icons-outlined">expand_less</span>
+    </div>
+  
+    <footer>
+      <div class="text-center">
+        &copy ; 2023 T.Oyama
+      </div>
+    </footer>
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+  </body>
+</html>
