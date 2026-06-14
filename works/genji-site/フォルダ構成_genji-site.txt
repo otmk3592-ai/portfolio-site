@@ -1,0 +1,16 @@
+Portfolio_site/
+└── works/
+    └── genji-site/
+        ├── index.html
+        ├── .json/
+        │   └── launch.json
+        ├── css/
+        │   ├── genji-style.css
+        │   └── sakura-style.css
+        ├── images/
+        │   ├── apple-touch-icon-180x180.png
+        │   ├── favicon.ico
+        │   ├── icon-192x192.png
+        │   └── kochyo-min-3784x2200.jpg
+        └── js/
+            └── main.js

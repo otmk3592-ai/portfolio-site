@@ -342,11 +342,11 @@ h1 {
     line-height: 1rem;
 }
 
+/* 目次は画面幅いっぱいでOK height: auto;*/
 .index {
-    width: 50%;/*白抜きの幅*/
-    height: auto;
-    margin: auto;
-    padding: 10px;
+    width: 90%; /*50% → 90% 白抜きの幅*/
+    margin: 0 auto; /*auto  → 0 auto*/
+    padding: 16px; /*10 → 16*/
     border-radius: 10px;/*角丸め*/
 }
 
@@ -358,20 +358,20 @@ h1 {
     margin: 0;
 }
 
-.blank_space1{
-    display:none;
+/* 空白文字は非表示のままでOK */
+.blank_space1,
+.blank_space6 {
+    display: none;
 }
 
-.blank_space6{
-    display:none;
-}
-
+/* 本文は100%幅で */
 .contents-translucent {
-    max-width: 25%;
-    margin: 0 1rem;
-    padding: 1.5rem 1.5rem;
+    max-width: 100%; /*25% → 100%*/
+    margin: 1rem auto; /*0 1rem → */
+    padding: 1.2rem; /*1.5*/
 }
 
+/* コメントも幅いっぱい */
 .comment {
     font-size: 18px;
     width: 100%;
