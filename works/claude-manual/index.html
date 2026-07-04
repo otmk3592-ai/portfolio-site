@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Claudeアプリ（Android版）インストール・起動マニュアル</title>
+<style>
+  :root{
+    --blue-900:#0d3b73;
+    --blue-700:#12539c;
+    --blue-600:#1a63b8;
+    --blue-100:#e9f2fb;
+    --blue-050:#f4f9fd;
+    --red-600:#c62828;
+    --gray-800:#28313c;
+    --gray-500:#5b6673;
+    --gray-200:#dfe6ee;
+    --white:#ffffff;
+    --radius:10px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    font-family:"Hiragino Kaku Gothic ProN","Hiragino Sans","Yu Gothic",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    color:var(--gray-800);
+    background:var(--blue-050);
+    line-height:1.8;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--blue-700);}
+
+  /* ---- Header ---- */
+  header.top{
+    background:linear-gradient(135deg,var(--blue-900),var(--blue-600));
+    color:#fff;
+    padding:28px 20px 34px;
+  }
+  .eyebrow{
+    font-size:12px;
+    letter-spacing:.12em;
+    text-transform:uppercase;
+    opacity:.85;
+    margin:0 0 8px;
+  }
+  header.top h1{
+    margin:0;
+    font-size:clamp(20px,5vw,30px);
+    font-weight:700;
+    line-height:1.4;
+  }
+  .meta-row{
+    margin-top:14px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:8px;
+    font-size:12.5px;
+  }
+  .meta-pill{
+    background:rgba(255,255,255,.14);
+    border:1px solid rgba(255,255,255,.35);
+    border-radius:999px;
+    padding:4px 12px;
+  }
+
+  /* ---- Layout ---- */
+  .wrap{
+    max-width:860px;
+    margin:0 auto;
+    padding:0 16px 60px;
+  }
+  nav.toc{
+    background:#fff;
+    border:1px solid var(--gray-200);
+    border-radius:var(--radius);
+    margin-top:-18px;
+    padding:16px 18px;
+    box-shadow:0 6px 18px rgba(13,59,115,.08);
+  }
+  nav.toc p{
+    margin:0 0 8px;
+    font-size:12px;
+    font-weight:700;
+    color:var(--blue-700);
+    letter-spacing:.06em;
+  }
+  nav.toc ol{
+    margin:0;
+    padding-left:20px;
+    font-size:14.5px;
+  }
+  nav.toc a{text-decoration:none;}
+  nav.toc a:hover{text-decoration:underline;}
+
+  section.topic{
+    background:#fff;
+    border:1px solid var(--gray-200);
+    border-radius:var(--radius);
+    margin-top:22px;
+    padding:24px 20px 28px;
+    scroll-margin-top:16px;
+  }
+  section.topic h2{
+    color:var(--blue-900);
+    font-size:19px;
+    margin:0 0 4px;
+    padding-bottom:10px;
+    border-bottom:3px solid var(--blue-600);
+  }
+  .shortdesc{
+    color:var(--gray-500);
+    font-size:14px;
+    margin:10px 0 18px;
+  }
+  h3.subhead{
+    color:var(--blue-700);
+    font-size:15.5px;
+    margin:22px 0 8px;
+  }
+  .box{
+    background:var(--blue-100);
+    border-left:4px solid var(--blue-600);
+    border-radius:6px;
+    padding:12px 14px;
+    font-size:14px;
+    margin:14px 0;
+  }
+  .box.result{border-left-color:#2e7d32;background:#eaf6ec;}
+  .box strong{color:var(--blue-900);}
+  ul.plain{padding-left:20px;}
+  ul.plain li{margin-bottom:6px;}
+
+  /* ---- Steps ---- */
+  ol.steps{list-style:none;margin:18px 0 0;padding:0;counter-reset:step;}
+  ol.steps li{
+    counter-increment:step;
+    position:relative;
+    padding:2px 0 20px 46px;
+    border-left:2px solid var(--gray-200);
+    margin-left:16px;
+  }
+  ol.steps li:last-child{border-left:2px solid transparent;padding-bottom:2px;}
+  ol.steps li::before{
+    content:counter(step);
+    position:absolute;
+    left:-16px;
+    top:-2px;
+    width:32px;
+    height:32px;
+    background:var(--red-600);
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-weight:700;
+    font-size:14.5px;
+    box-shadow:0 2px 6px rgba(198,40,40,.35);
+  }
+  .step-cmd{font-weight:600;color:var(--gray-800);}
+  .step-info{
+    margin-top:6px;
+    font-size:13px;
+    color:var(--gray-500);
+    background:var(--blue-050);
+    border-radius:6px;
+    padding:8px 10px;
+  }
+  .step-xmp{
+    margin-top:6px;
+    font-size:13px;
+    color:var(--blue-700);
+    font-style:italic;
+  }
+  .uicontrol{
+    background:#fff3e0;
+    color:#8a4b00;
+    border:1px solid #f0cf9a;
+    border-radius:4px;
+    padding:0 5px;
+    font-weight:600;
+    font-size:.95em;
+  }
+
+  footer{
+    text-align:center;
+    color:var(--gray-500);
+    font-size:12px;
+    padding:30px 16px 40px;
+  }
+
+  @media (max-width:480px){
+    section.topic{padding:18px 14px 22px;}
+    ol.steps{margin-left:2px;}
+    ol.steps li{padding-left:42px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap" style="padding:0;">
+    <p class="eyebrow">User Manual / Android</p>
+    <h1>Claudeアプリ（Android版）<br>インストール・起動マニュアル</h1>
+    <div class="meta-row">
+      <span class="meta-pill">対象OS: Android</span>
+      <span class="meta-pill">形式: WEBマニュアル（レスポンシブ）</span>
+      <span class="meta-pill">最終更新: 2026年7月</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+  <nav class="toc" aria-label="目次">
+    <p>目次</p>
+    <ol>
+      <li><a href="#overview">このマニュアルについて</a></li>
+      <li><a href="#install-launch">Claudeアプリのインストールと起動</a></li>
+    </ol>
+  </nav>
+
+  <!-- ============ Topic 1: Concept ============ -->
+  <section class="topic" id="overview">
+    <h2>1. このマニュアルについて</h2>
+    <p class="shortdesc">本マニュアルの目的、対象読者、および前提条件について説明します。</p>
+
+    <p>本マニュアルでは、Android スマートフォンに Claude アプリをインストールし、起動するまでの手順を説明します。</p>
+
+    <h3 class="subhead">対象読者</h3>
+    <p>初めて Claude アプリをスマートフォンで利用する方を対象としています。</p>
+
+    <h3 class="subhead">前提条件</h3>
+    <p>手順を開始する前に、以下を満たしていることを確認してください。</p>
+    <ul class="plain">
+      <li>Android OS を搭載したスマートフォンをお使いであること</li>
+      <li>Google アカウントでログイン済みの Google Play ストアが利用できること</li>
+      <li>安定したインターネット接続（Wi-Fi 推奨）があること</li>
+      <li>端末の空き容量が十分にあること</li>
+    </ul>
+
+    <h3 class="subhead">納品形式</h3>
+    <ul class="plain">
+      <li>WEBマニュアル（スマートフォン・PCの両方に対応するレスポンシブ形式）</li>
+      <li>PDF（印刷・配布用）</li>
+      <li>Word（納品後の軽微な修正に対応する編集可能形式）</li>
+    </ul>
+  </section>
+
+  <!-- ============ Topic 2: Task ============ -->
+  <section class="topic" id="install-launch">
+    <h2>2. Claudeアプリのインストールと起動</h2>
+    <p class="shortdesc">Google Play ストアから Claude アプリをインストールし、初回起動するまでの手順です。</p>
+
+    <div class="box">
+      <strong>事前確認：</strong> 「1. このマニュアルについて」に記載した前提条件（Android端末、Google Playストア、インターネット接続）を満たしていることを確認してください。
+    </div>
+
+    <ol class="steps">
+      <li>
+        <div class="step-cmd">ホーム画面またはアプリ一覧から <span class="uicontrol">Playストア</span> アイコンをタップします。</div>
+      </li>
+      <li>
+        <div class="step-cmd">画面上部の検索バーをタップし、「<span class="uicontrol">Claude</span>」と入力して検索します。</div>
+      </li>
+      <li>
+        <div class="step-cmd">検索結果の一覧から「<span class="uicontrol">Claude by Anthropic</span>」を選択します。</div>
+      </li>
+      <li>
+        <div class="step-cmd">アプリの詳細画面で <span class="uicontrol">インストール</span> をタップします。</div>
+        <div class="step-info">通信環境によってはダウンロードに時間がかかる場合があります。Wi-Fi環境での実行を推奨します。</div>
+      </li>
+      <li>
+        <div class="step-cmd">ダウンロードとインストールが完了するまで待ちます。</div>
+      </li>
+      <li>
+        <div class="step-cmd"><span class="uicontrol">開く</span> をタップするか、ホーム画面に追加された Claude アイコンをタップして、アプリを起動します。</div>
+      </li>
+      <li>
+        <div class="step-cmd">初回起動時に表示される利用規約・プライバシーポリシーの画面で内容を確認し、同意します。</div>
+      </li>
+      <li>
+        <div class="step-cmd">既存のアカウントをお持ちの場合はログインし、お持ちでない場合は画面の案内に従って新規アカウントを作成します。</div>
+        <div class="step-xmp">例：メールアドレスまたはGoogleアカウントでの登録が選択できます。</div>
+      </li>
+    </ol>
+
+    <div class="box result">
+      <strong>完了の確認：</strong> Claude アプリのホーム画面（チャット入力画面）が表示されれば、インストールと起動は完了です。
+    </div>
+
+    <h3 class="subhead">うまくいかない場合</h3>
+    <p>アプリが起動しない場合は、端末を再起動するか、Playストアでアプリのアップデートがないか確認してください。</p>
+  </section>
+
+  <footer>
+    © 2026 &nbsp;|&nbsp; Claudeアプリ（Android版）インストール・起動マニュアル &nbsp;|&nbsp; DITAソースより生成
+  </footer>
+</div>
+
+</body>
+</html>
