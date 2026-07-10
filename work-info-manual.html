@@ -147,6 +147,8 @@
             <p>1つのDITAソース（構造化されたXML）から複数の出力形式を作る、いわゆる「シングルソースパブリッシング」の考え方を実践しています。</p>
           <h3 class="site-heading">想定読者・用途</h3>
             <p>初めてアプリを利用するユーザー向けの操作マニュアル。配布形態（Web閲覧／印刷／社内での編集）に応じて3形式を使い分けることを想定しています。</p>
+          <h3 class="site-heading">使用ツール</h3>
+            <p>VScode・Claude・DITA-OT4.4・Word</p>
         </div>
       </div><!---site-flex閉じ-->
 
@@ -159,9 +161,9 @@
           <a class="dl" href="works/claude-manual/index.html" target="_blank" rel="noopener noreferrer">開いて見る →</a>
         </div>
         <div class="format-card">
-          <img src="images/manual-pdf-sc.jpg" alt="PDFマニュアル">
+          <img src="images/manual-pdf-sc.png" alt="PDFマニュアル">
           <h4>PDF</h4>
-          <p>印刷・配布用にA4 1ページへ最適化。<br>手順番号は赤い丸バッジで統一。</p>
+          <p>印刷・配布用にA4 2ページへ最適化。<br>図は汎用性を重視しモックアップで統一。</p>
           <a class="dl" href="docs/claude-android-manual.pdf" target="_blank" rel="noopener noreferrer">PDFを見る →</a>
         </div>
         <div class="format-card">
@@ -174,9 +176,9 @@
 
       <h3 class="site-heading">制作プロセス</h3>
       <ol class="process-list">
-        <li>ヒアリング内容をもとに、マニュアル本文をDITA形式（.ditamap／.dita）で構造化。概要は<code>concept</code>トピック、手順は<code>task</code>トピックとして分離。</li>
+        <li>マニュアル本文をDITA形式（.ditamap／.dita）で構造化。概要は<code>concept</code>トピック、手順は<code>task</code>トピックとして分離。</li>
         <li>DITAソースをもとに、Web（レスポンシブHTML）・PDF・Wordの3形式を作成。青を基調に、手順番号のみ赤系で統一する配色ルールを全形式に適用。</li>
-        <li>「A4 1ページに収めてほしい」「Wordの手順番号がセル塗りつぶしになっていて他形式と印象が違う」というフィードバックを受け、余白・フォントサイズを調整し、手順番号を丸数字記号に変更して統一感を修正。</li>
+        <li>余白・フォントサイズを調整し、図を挿入、手順番号を丸数字記号に変更して統一感を修正。</li>
         <li>DITA-OT（DITA公式のパブリッシングエンジン）を実際にローカル環境（Java／VS Code）に構築し、DITAソースからHTML・PDFへの変換も確認。環境構築時のエラー（PATH未設定など）も一つずつ切り分けて解決。</li>
       </ol>
 
