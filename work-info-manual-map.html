@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<head lang="ja">
+  <head>
+    <!--リセットCSSはstyle.css内に記載-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <!--SNS対策OpenGraphProtocol-->
+  <meta property='og:type' content='website'>
+  <meta property='og:title' content='基盤地図情報ダウンロードサービス初回登録マニュアル｜PowerPoint形式での制作（T.Oyama Portfolio）'>
+  <meta property='og:url' content='https://t-oyama-portfolio.netlify.app/work-info-manual-map.html'>
+  <meta property='og:description' content='PowerPointで制作したマニュアルです。配色・手順番号のルールを統一して制作しました。'>
+  <meta property="og:image" content="https://t-oyama-portfolio.netlify.app/images/manual-map-ogp.png">
+  <meta name="description" content="PowerPoint形式で制作したマニュアルです。" />
+  <title>基盤地図情報ダウンロードサービス初回登録マニュアル｜PowerPoint制作 - T.Oyama Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Material+Icons+Outlined" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/icon-192x192.png"/>
+  <link rel="apple-touch-icon" type="image/png" href="images/apple-touch-icon-180x180.png">
+  <link ref="icon" href="images/favicon.ico">
+  <link rel="canonical" href="https://t-oyama-portfolio.netlify.app/work-info-manual.html" /><!--正規化-->
+  <style>
+    /* ---- このページ専用：3形式比較グリッド ---- */
+    .format-grid {
+      display: grid;
+      gap: 24px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 24px;
+      margin-bottom: 40px;
+    }
+    .format-card {
+      border-radius: 10px;
+      background-color: var(--background-color);
+      padding: 1rem;
+      text-align: center;
+    }
+    .format-card img {
+      border-radius: 6px;
+      box-shadow: 0 2px 10px rgba(0,0,0,.12);
+      margin-bottom: 12px;
+    }
+    .format-card h4 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 4px;
+      color: var(--text-color);
+    }
+    .format-card p {
+      font-size: 12.5px;
+      color: #666;
+      line-height: 1.6;
+    }
+    .format-card a.dl {
+      display: inline-block;
+      margin-top: 10px;
+      font-size: 12.5px;
+      color: #1ca9e3;
+      text-decoration: underline;
+    }
+    .process-list {
+      counter-reset: process;
+      padding-left: 0;
+    }
+    .process-list li {
+      counter-increment: process;
+      position: relative;
+      list-style: none;
+      padding: 4px 0 4px 32px;
+      margin-bottom: 6px;
+    }
+    .process-list li::before {
+      content: counter(process);
+      position: absolute;
+      left: 0;
+      top: 4px;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background-color: #c62828;
+      color: #fff;
+      font-size: 12px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (max-width: 766px) {
+      .format-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+  <body>
+    <!-- header -->
+    <header class="header">
+      <div class="header-inner">
+        <h1 class="header-logo">
+          <a href=".">T.Oyama-portfolio</a>
+        </h1>
+          <nav class="header-nav">
+            <ul class="header-nav-list">
+              <li class="header-nav-item"><a href="index.html">Home</a></li>
+              <li class="header-nav-item"><a href="works/claude-manual/index.html">Site</a></li>
+              <li class="header-nav-item"><a href="#contact">Contact</a></li>
+            </ul>
+          </nav>
+      </div>
+    </header>
+    <!-- /header -->
+
+    <div class="date"><!----旧クラス名Header-->
+      <time id="modify"></time>
+        <script>/* 更新日の取得 */
+          const last = new Date(document.lastModified);
+          const year = last.getFullYear();
+          const month = last.getMonth() + 1;
+          const date = last.getDate();
+          /* 日付を書き換える */
+          const target = document.getElementById('modify');
+          target.textContent = year + '-' + month + '-' + date;
+        </script>
+    </div>
+  <div class="site-wrapper">
+    <article class="site" id="site">
+      <h3 class="site-title">基盤地図情報ダウンロードサービス初回登録マニュアル（PowerPoint形式）</h3>
+        <div class="text-center">PowerPointで制作した、基盤地図情報ダウンロードサービス初回登録マニュアルマニュアルです。
+        </div>
+
+    <section class="skill-section" id="skill"></section>
+      <div class="site-flex">
+        <div class="site-flex__item">
+          <a href="works/map-manual/manual-map.pdf" target="_blank" rel="noopener noreferrer">
+          <img src="images/manual-map.png" width="1000" height="auto" title="このマニュアルに移動"></a>
+        </div><!--site-flex-item閉じ-->
+
+        <div class="site-flex__item">
+          <h3 class="site-heading">PowerPointマニュアルURL（別ウィンドウで開きます）</h3>
+            <a href="works/map-manual/manual-map.pdf" target="_blank" rel="noopener noreferrer">works/map-manual/manual-map.pdf</a>
+          <h3 class="site-heading">制作期間</h3>
+            <p>マニュアル構成・PowerPoint化：1日</p>
+          <h3 class="site-heading">背景・目的</h3>
+            <p>「国土地理院から基盤地図情報をダウンロードするのに必要な初回登録の手続きをPowerPointでマニュアル化してほしい」という想定で制作しました。</p>
+          <h3 class="site-heading">想定読者・用途</h3>
+            <p>初めて国土地理院ダウンロードサービスを利用するユーザー向けの操作マニュアル。配布形態（Web閲覧／印刷／社内での編集）に応じる事を想定しています。</p>
+          <h3 class="site-heading">使用ツール</h3>
+            <p>VScode・Claude・PowerPoint</p>
+      <h3 class="site-heading">制作プロセス</h3>
+      <ol class="process-list">
+        <li>実際に作業しながらスクリーンショットを取得。</li>
+        <li>PowerPointで本文制作。青を基調に、手順番号のみ赤系で統一する配色ルールを全形式に適用。</li>
+        <li>余白・フォントサイズを調整し、図を挿入、手順番号を丸数字記号に変更して統一感を修正。</li>
+      </ol>
+
+      <h3 class="site-heading">こだわった点</h3>
+        <li>色や記号のルールを「思いつきで各形式に置く」のではなく、共通の設計ルールとして最初に決め、3形式すべてに一貫して反映させることを意識しました。PowerPointは、単なる見た目の再現ではなく「配布後に社内の誰もが早急に修正ができること」を優先し、WEB版でも軽微な修正が可能です。</li>
+        <li>本資料は、ポートフォリオ（制作実績）として作成したサンプルマニュアルです。国土地理院その他の公的機関とは一切関係がなく、実在のサービスに対する公式な手順書ではありません。内容の正確性・最新性は保証されません。</li>
+        </div>
+      </div><!---site-flex閉じ-->
+    </section>
+
+    <!-- contact -->
+    <section class="contact" id="contact">
+      <div class="inner">
+        <h2 class="title">CONTACT</h2>
+          <p class="text-center">
+            お問い合わせは、履歴書に記載のメールアドレスにお願い致します。
+          </p>
+      </div>
+    </section>
+  </div>
+    <!-- /contact -->
+    <div class="page-top" id="js-page-top">
+      <span class="material-icons-outlined">expand_less</span>
+    </div>
+
+    <footer>
+      <div class="text-center">
+        &copy ; 2026 T.Oyama
+      </div>
+    </footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type='text/javascript' src="js/script.js"></script>
+  </body>
+</html>
